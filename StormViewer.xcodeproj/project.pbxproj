@@ -82,8 +82,8 @@
 				6439B9332A798E0400CDCC74 /* Main.storyboard */,
 				6439B9362A798E0500CDCC74 /* Assets.xcassets */,
 				6439B9382A798E0500CDCC74 /* LaunchScreen.storyboard */,
-				6439B93B2A798E0500CDCC74 /* Info.plist */,
 				6439B9412A798F5E00CDCC74 /* Content */,
+				6439B93B2A798E0500CDCC74 /* Info.plist */,
 			);
 			path = StormViewer;
 			sourceTree = "<group>";

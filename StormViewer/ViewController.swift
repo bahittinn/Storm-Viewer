@@ -14,6 +14,8 @@ class ViewController: UITableViewController {
     var sortedArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.prefersLargeTitles = true
+        title = "Images"
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
@@ -26,17 +28,20 @@ class ViewController: UITableViewController {
         sortedArray = pictures.sorted()
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pictures.count
+        return sortedArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture")
         cell?.textLabel?.text = sortedArray[indexPath.row]
+        cell?.textLabel?.adjustsFontSizeToFitWidth = true
+        cell?.textLabel?.font = UIFont.systemFont(ofSize: 12)
         return cell!
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
-            vc.selectedImage = pictures[indexPath.row]
-            navigationController?.present(vc, animated: true)
+            vc.selectedImage = sortedArray[indexPath.row]
+            vc.imageTitle = "Picture \(indexPath.row + 1) of \(sortedArray.count)"
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
     

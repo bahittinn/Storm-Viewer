@@ -32,8 +32,11 @@ class ViewController: UITableViewController {
         return cell!
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "detailSG", sender: nil)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            vc.selectedImage = pictures[indexPath.row]
+            navigationController?.present(vc, animated: true)
+        }
     }
-     
+    
 }
 

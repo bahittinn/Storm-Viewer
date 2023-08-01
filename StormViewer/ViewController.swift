@@ -11,6 +11,7 @@ class ViewController: UITableViewController {
 
     
     var pictures = [String]()
+    var sortedArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         let fm = FileManager.default
@@ -22,13 +23,14 @@ class ViewController: UITableViewController {
                 pictures.append(item)
             }
         }
+        sortedArray = pictures.sorted()
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return pictures.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Picture")
-        cell?.textLabel?.text = pictures[indexPath.row]
+        cell?.textLabel?.text = sortedArray[indexPath.row]
         return cell!
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

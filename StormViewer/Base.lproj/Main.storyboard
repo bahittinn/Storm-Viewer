@@ -58,18 +58,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0fK-Lq-uff">
-                                <rect key="frame" x="76.666666666666686" y="301" width="240" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="GLP-FS-cNi"/>
-                                    <constraint firstAttribute="height" constant="250" id="wba-Nq-OrY"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0cH-ck-phr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="0fK-Lq-uff" firstAttribute="centerX" secondItem="7g8-2P-rV9" secondAttribute="centerX" id="806-Ha-KVY"/>
-                            <constraint firstItem="0fK-Lq-uff" firstAttribute="centerY" secondItem="7g8-2P-rV9" secondAttribute="centerY" id="XLK-bR-Rzw"/>
+                            <constraint firstItem="0fK-Lq-uff" firstAttribute="leading" secondItem="0cH-ck-phr" secondAttribute="leading" id="WVS-9Z-e1K"/>
+                            <constraint firstItem="0cH-ck-phr" firstAttribute="bottom" secondItem="0fK-Lq-uff" secondAttribute="bottom" id="YDp-AF-YSz"/>
+                            <constraint firstItem="0fK-Lq-uff" firstAttribute="top" secondItem="0cH-ck-phr" secondAttribute="top" id="gfT-F7-yTm"/>
+                            <constraint firstItem="0cH-ck-phr" firstAttribute="trailing" secondItem="0fK-Lq-uff" secondAttribute="trailing" id="oE6-6N-Nbv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Yie-cC-QPf"/>
